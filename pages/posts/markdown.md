@@ -1,99 +1,25 @@
 ---
 title: Markdown Examples
-date: 2021/3/19
+date: 2021/5/6
 description: View examples of all possible Markdown options.
 tag: web development
-author: You
+author: Raaid
 ---
 
-# Markdown Examples
+# Pop the Bubble News: V0
 
-## h2 Heading
+I feel uncomfortable with how different my reality seems to be than the reality experienced by many others. A big part of this can likely be attributed to our news consumption and who we choose to talk to. We live in our own bubbles. If for no one else besides myself, I thought it might be useful to have a simple dashboard that shows the whole spectrum of news in the U.S. at a glance.
 
-### h3 Heading
+This first version is rather simple and just pulls the 10 latest articles from a variety of RSS feeds and organizes them into political lanes as categorized by existing research. [Check it out here](https://popthebubble.news/).
 
-#### h4 Heading
+I will keep adding news sources and responding to feature requests/bug fixes, and if time allows, I intend to add some big features. A tentative roadmap/feature backlog:
+- Cluster and present articles by topic
+- Present topics over time
+- Present source-by-source and lane-by-lane statistics
+- Create a generated daily/weekly newsletter email
 
-##### h5 Heading
+If any of these sounds appealing to you (or if there is anything else you can suggest), feel free to contact me and/or support this project (raaid@protonmail.com and support links are available on the project's website).
 
-###### h6 Heading
+Cheers,
 
-## Emphasis
-
-**This is bold text**
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Blockquotes
-
-> Develop. Preview. Ship. – Vercel
-
-## Lists
-
-Unordered
-
-- Lorem ipsum dolor sit amet
-- Consectetur adipiscing elit
-- Integer molestie lorem at massa
-
-Ordered
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-## Code
-
-Inline `code`
-
-```
-export default function Nextra({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <link
-          rel="alternate"
-          type="application/rss+xml"
-          title="RSS"
-          href="/feed.xml"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  )
-}
-```
-
-## Tables
-
-| **Option** | **Description**                                                                                                             |
-| ---------- | --------------------------------------------------------------------------------------------------------------------------- |
-| First      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| Second     | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-| Third      | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
-
-## Links
-
-- [Next.js](https://nextjs.org)
-- [Nextra](https://nextra.vercel.app/)
-- [Vercel](http://vercel.com)
-
-### Footnotes
-
-- Footnote [^1].
-- Footnote [^2].
-
-[^1]: Footnote **can have markup**
-
-    and multiple paragraphs.
-
-[^2]: Footnote text.
++raaid
