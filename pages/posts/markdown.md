@@ -1,7 +1,7 @@
 ---
-title: Markdown Examples
+title: Pop the Bubble News: V0
 date: 2021/5/6
-description: View examples of all possible Markdown options.
+description: Presenting Pop the Bubble News, a simple news dashboard.
 tag: popthebubble
 author: Raaid
 ---
