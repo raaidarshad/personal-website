@@ -18,7 +18,7 @@ I will keep adding news sources and responding to feature requests/bug fixes, an
 - Present source-by-source and lane-by-lane statistics
 - Create a generated daily/weekly newsletter email
 
-If any of these sounds appealing to you (or if there is anything else you can suggest), feel free to contact me and/or support this project (raaid@protonmail.com and support links are available on the project's website).
+If any of these sounds appealing to you (or if there is anything else you can suggest), feel free to contact me and/or support this project ( team@popthebubble.news and support links are available on the project's website).
 
 Cheers,
 
