@@ -2,7 +2,7 @@
 title: Pop the Bubble News V0
 date: 2021/5/6
 description: Presenting Pop the Bubble News, a simple news dashboard.
-tag: popthebubble
+tag: popthebubble, project, software
 author: Raaid
 ---
 
