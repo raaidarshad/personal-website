@@ -19,7 +19,7 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 
 ### Current priorities
 - *P1* Finish ETL pipelines: 80 -> 100%
-- *P1* Deploy ETL pipelines: 0 -> 100$
+- *P1* Deploy ETL pipelines: 0 -> 100%
 - *P1* Create and launch mail option: 0%
 - *P2* Add Plausible Analytics: 0 -> 100%
 
