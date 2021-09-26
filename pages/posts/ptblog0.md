@@ -32,14 +32,14 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 - *P2* Make BubblePopper tool V0
 
 ### Key requirements
-1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: not enough data yet. Confidence to achieve: <span style="color:red">3/10</span>
+1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: not enough data yet. Confidence to achieve: 3/10
 2. Get 25 mail list subscribers. Current: 0 subscribers. Confidence to achieve: 4/10
 3. Get 25 Instagram followers. Current: 0 followers. Confidence to achieve: 5/10
 
 ### Health metrics
 Don't have much to protect since we're just starting. Myself and my costs are the only things I can think of for now.
-- <span style="color: green">Me</span>
-- <span style="color: yellow">Costs</span>
+- Me: Green
+- Costs: Yellow
 
 ### Week's successes
 - The ETL pipelines are done and deployed! They're running! As we speak!
