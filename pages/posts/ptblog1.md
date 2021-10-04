@@ -43,7 +43,7 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 - Costs: Yellow
 
 ### Week's successes
-- 
+- Restructured the DB and pipelines to a new schema/organization that will result in cleaner code, better provenance, better performance, and easier debugging
 
 ## Standup logs
 
