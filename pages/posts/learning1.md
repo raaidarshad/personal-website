@@ -8,7 +8,7 @@ author: Raaid
 
 This week, my head-bashing was courtesy of SQL! Learned some good things though.
 
-- A good reason to use SQLAlchemy/SQLModel if interacting with SQL from Python is that you can also use [Alembic](https://alembic.sqlalchemy.org/en/latest/index.html)! It is a pretty straightforward change management tool for your SQLAlchemy-defined tables/constraints/etc. For example, I made a typo in my table models and needed to add a unique constraint to a column. At the terminal (assuming you have it installed and your venv activated), I wrote in the revision file:
+- A good reason to use SQLAlchemy/SQLModel if interacting with SQL from Python is that you can also use [Alembic](https://alembic.sqlalchemy.org/en/latest/index.html)! It is a pretty straightforward change management tool for your SQLAlchemy-defined tables/constraints/etc. For example, I made a typo in my table models and needed to add a unique constraint to a column. At the terminal (assuming you have it installed and your venv activated), I wrote:
 
 ```
 > alembic init alembic
