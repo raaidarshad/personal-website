@@ -46,9 +46,9 @@ Note that I only considered tools I could use relatively easily as a Python deve
 
 ## Airflow
 ### Summary
-**Not considered**, though it is prevalent in the space, backed by Airbnb, and has lots of users. DAG deployment is tricky, the Helm chart doesn’t have official support, and there are a lot of hacks and workarounds to get Airflow to work the way we would want and we prefer to not work against how something is designed if there is a viable alternative.
+**Not considered**, though it is prevalent in the space, backed by Airbnb, and has lots of users. DAG deployment is tricky, the Helm chart doesn’t have official support, and there are a lot of hacks and workarounds to get Airflow to work the way we would want and we prefer to not work against how something is designed if there is a viable alternative. Also, [Prefect's hit piece](https://www.prefect.io/blog/why-not-airflow/) is quite persuasive and makes some very good points about why one shouldn't use Airflow.
 
-A summary of things that are not supported in a first-class way:
+A summary of things that are not supported in a first-class way (lifted from Prefect's piece):
 - Runs which need to be run off-schedule or with no schedule at all
 - Runs that run concurrently with the same start time
 - DAGs with complicated branching logic
