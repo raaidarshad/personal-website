@@ -2,7 +2,7 @@
 title: Workflow Orchestration Tools Comparison
 date: 2021/10/15
 description: Do you like DAGs?
-tag: software
+tag: software, opinion
 author: Raaid
 ---
 
