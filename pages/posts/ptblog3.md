@@ -32,7 +32,7 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 - *P2* Make BubblePopper tool V0
 
 ### Key requirements
-1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: <1/day. Confidence to achieve: 3/10
+1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: ~1/day. Confidence to achieve: 2/10
 2. Get 25 mail list subscribers. Current: 0 subscribers. Confidence to achieve: 4/10
 3. Get 25 Instagram followers. Current: 0 followers. Confidence to achieve: 4/10
 

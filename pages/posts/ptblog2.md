@@ -6,7 +6,9 @@ tag: project, log, popthebubble
 author: Raaid
 ---
 
-UPDATE: Started work on another idea to validate that was on hold, so I will not be working on this _every_ day this week. Primary focus is still refactoring the ETL side of things given what I learned upon the first pass of deploying it, so the current priorities from last week are still the current priorities this week.
+UPDATE: The purpose of the Key Requirements was to measure interest for idea validation. Given that the idea is already validated to an extent by another organization (see Friday's stand-up notes), *proving* this seems less important, but this will still be important once I have a product to show.
+
+Also, I found a [research report from the Pew Research Center](https://www.pewresearch.org/journalism/2016/07/07/the-modern-news-consumer/) I bookmarked a while back that has a lot of data to suggest there is a young, online-news-reading demographic that knows there is bias in their news and would really appreciate tools/products/services that address that.
 
 ## OKRs
 Current period ends December 31, 2021.
@@ -32,7 +34,7 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 - *P2* Make BubblePopper tool V0
 
 ### Key requirements
-1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: <1/day. Confidence to achieve: 3/10
+1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: ~1/day. Confidence to achieve: 3/10
 2. Get 25 mail list subscribers. Current: 0 subscribers. Confidence to achieve: 4/10
 3. Get 25 Instagram followers. Current: 0 followers. Confidence to achieve: 5/10
 
