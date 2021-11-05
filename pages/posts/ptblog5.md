@@ -41,7 +41,7 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 
 ### Week's successes
 - Clustering looks good (enough)!
-- 
+- Initial proof-of-concept for sentence-level similarity looks promising
 
 ## Standup logs
 
