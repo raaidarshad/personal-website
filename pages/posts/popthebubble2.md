@@ -15,7 +15,9 @@ A few months ago, I made a very simple formatted RSS reader of a website. That f
 
 I, however, haven't been able to let it go. I want to solve this problem: **I can't have a conversation with so many people because we aren't even in the same reality.** My NPR-listening, NYT-reading world is different from their Fox News-watching world, or your CNN-news-alert world. What am I supposed to do when someone talks about a crisis that I don't think is real? Or if I talk about the impacts of a historical event someone asserts didn't happen? Maybe if they're a friend, and we're face to face, we might stand a chance of getting somewhere. But a stranger? And online, at that? Not a chance.
 
-I have reason to believe that there is an appetite for something that addresses this problem. First, there are other efforts to tackle it (though one in particular earns my distrust as it is backed by venture capital and Facebook, of all things). Second, [the Pew Research Center published a report on the modern news consumer](https://www.pewresearch.org/journalism/2016/07/07/the-modern-news-consumer/) that I found rather illuminating. Some key points from the report (all emphasis is mine):
+I was recently talking with a close friend's parent. They were describing anarchy in a major US city, and I had heard absolutely nothing about it, going so far so as to doubt the validity of what they were saying. How could I not have heard of it? What they were describing didn't seem real, and if it was, shouldn't I have heard of it? I, in turn, talked about the horror of the pandemic in NYC last summer, and they responded to me in the same way I responded to them. This was painful. I felt far away. I felt uncertain. What's the alternative? To stop conversation all together? That can't be it.
+
+I have reason to believe that there is an appetite for something that addresses this problem beyond my own. First, there are other efforts to tackle it (though one in particular earns my distrust as it is backed by venture capital and Facebook, of all things). Second, [the Pew Research Center published a report on the modern news consumer](https://www.pewresearch.org/journalism/2016/07/07/the-modern-news-consumer/) that I found rather illuminating. Some key points from the report (all emphasis is mine):
 
 - U.S. adults see the news media as performing its watchdog function – but overwhelmingly say that news organizations are **biased**
 - About **four-in-ten** Americans often **get news online** (the largest category is TV, online news reading is second)
@@ -31,22 +33,20 @@ There is some subset of the population that is frustrated with bias, and many of
 
 We can do better.
 
-I want a world of critical thinkers, of empathy, of nuance. Not a world of blind-faith, dehumanization, and binaries. **I want a world where we agree on reality**. And I think we can get there. We have to.
+The world is better off with more critical thinkers, empathy, nuance, and less blind-faith, dehumanization, and binaries. **The world is better when we agree on reality**. We can get there. We have to.
 
 ## My Proposal
 
-I won't dare pretend that I can fix this, but that won't stop me from trying. Here is my idea.
+I won't pretend that this problem can be easily fixed, but that won't stop me from trying. Here is my idea.
 
-If you're familiar with investing, I am thinking of a "news ETF". Individual news sources cover different things, and they cover those things differently. Sometimes it's an exclusive, sometimes its outright spin with the intent of coloring the events. In other words, there is "noise", or extra variation from an individual source, and it can be "good" or "bad". Part of the benefit of investing in an ETF over investing in individual stocks is that you manage to reduce some of that noise.
+**A bias-aware, context-aware news system,** starting with a weekly email with an algorithmically clustered and annotated view of the week’s news. It will communicate all the facts, the takes, the spins, the incentives, and more.
 
-**I envision a bias-aware, context-aware news system,** starting with a weekly email with an algorithmically clustered and annotated view of the week’s news. I want you to know about all the facts, the takes, the spins, the incentives, and more.
+A few examples (these are hypotheticals with made up details):
+- If the U.S. conducts military action and all your American news says its a good thing and we're bringing them freedom and democracy, it shows foreign news that might say otherwise, and all that is common between all the reporting
+- If Biden gives a speech, it shows that many people did receive it well, that he might have had a teleprompter gaff, and most importantly it shows you what he said without anyone telling you what to think of it
+- If Congress tries to pass a bill but there are many obstacles, it shows you that it isn't just that Democrats are fighting amongst themslves or that Republicans are being obstructionist; it shows you that it is some combination of these things (if that is indeed what is happening)
 
-A few examples (these are hypotheticals, don't skewer me on the made up details):
-- If the U.S. conducts military action and all your American news says its a good thing and we're bringing them freedom and democracy, I want you to see foreign news that might say otherwise, and I want you to see what is common between all the reporting
-- If Biden gives a speech, I want you to see that maybe people did receive it well, that he might have had a teleprompter gaff, but most importantly I want you to see what he said without anyone telling you what to think of it
-- If Congress tries to pass a bill but there are many obstacles, I want you to see that it isn't just that Democrats are fighting amongst themslves or that Republicans are being obstructionist; I want you to see that it is some combination of these things (if that is indeed what is happening)
-
-More concretely, here are some tools/services that I believe can contribute towards the goal:
+More concretely, here are some tools/services that can contribute towards the goal:
 
 - A topic-driven, bias-aware view that allows you to see the full spectrum of coverage on a given event/idea. It identifies objective content, subjective statements, intentional spin, and more. Part of this is already built out!
 - A tool where you can drop an article link and see where it sits in context of all other coverage on the topic (with the above-mentioned view)
@@ -57,7 +57,7 @@ More concretely, here are some tools/services that I believe can contribute towa
 
 If any of this resonates with you, I want your help. I need to know what works and what doesn't, what is useful, what isn't. The two most impactful things you can do for me with (I think) as little effort as possible are:
 
-1. [Sign up as a beta "user" to receive weekly emails of a bias-aware news](https://forms.gle/6u2PDJGRiJno5EK96)
+1. [Sign up as a "beta user" to receive weekly emails of a bias-aware news](https://forms.gle/6u2PDJGRiJno5EK96)
 2. Give me feedback on the content you receive (text me, call me, respond to the email, dm me on Instagram, any way at all)
 
 If there is anything that you'd find useful to see, any attribute of this problem that I'm missing, something that really works for you, anything that definitely *doesn't* work, I want you to let me know. The more people find this useful, the more people will use it, and the closer I hope we'd come to being in the same reality.
@@ -73,9 +73,9 @@ If you have more time/resources, here are other things that I need help with:
 - UI design/information presentation
 - Someone with natural language processing (NLP) ideas and experience
 
-I hate asking anyone for money, but it seems the non-profit route and being this early in a venture require some kind of seed money to have hope of success. The main reason I need funding is to hire people to help make this and to inevitably iterate on it to make it better when it isn't good enough.
+The main reason I need funding is to hire people to help make this and to inevitably iterate on it to make it better when it isn't good enough. I know it is asking a lot, but I think it is an important effort.
 
-If you've made it this far, thank you sincerely. I don't know if this will go anywhere, I don't know if anyone will find it useful. Maybe it will with some hard work and coffee, support from friends and folks who are as idealistic as me, and a galaxy's worth of luck. Maybe it won't. But I won't know without trying, and I'm sure as hell going to try.
+If you've made it this far, thank you sincerely. Maybe it will work with some hard work and coffee, support from friends and folks who are as idealistic as me, and a galaxy's worth of luck. But I won't know without trying, and I'm sure as hell going to try.
 
 Cheers,
 
