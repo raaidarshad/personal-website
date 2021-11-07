@@ -72,6 +72,7 @@ If you have more time/resources, here are other things that I need help with:
 - Asking people for money
 - UI design/information presentation
 - Someone with natural language processing (NLP) ideas and experience
+- Did I mention fundraising?
 
 The main reason I need funding is to hire people to help make this and to inevitably iterate on it to make it better when it isn't good enough. I know it is asking a lot, but I think it is an important effort.
 
