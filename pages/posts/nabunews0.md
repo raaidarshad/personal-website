@@ -1,12 +1,12 @@
 ---
-title: Savvy News V0.1
+title: Nabu News
 date: 2021/11/2
-description: Savvy News
-tag: popthebubble, project, software
+description: Nabu News Launch Announcement
+tag: popthebubble, nabu, project, software
 author: Raaid
 ---
 
-# Savvy News V0.1
+# Nabu News
 (formerly Pop the Bubble News)
 
 A few months ago, I made a very simple formatted RSS reader of a website. That first version just pulls the 10 latest articles from a variety of RSS feeds and organizes them into political lanes as categorized by existing research. [Check it out here](https://popthebubble.news/). My friends and close network thought it was a cool idea and seemed to like the spirit of the idea, but it is not the most usable product. It doesn't do too much for ya, so why bother?

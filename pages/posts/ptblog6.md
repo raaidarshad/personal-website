@@ -6,7 +6,7 @@ tag: project, log, popthebubble
 author: Raaid
 ---
 
-Back end up and running (in dev), focusing on getting something worth looking at on the page next.
+Reframing this for myself and going to work on getting whatever I have in front of people.
 
 ## OKRs
 Current period ends December 31, 2021.
@@ -40,7 +40,7 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 - Costs: Yellow
 
 ### Week's successes
-- TODO
+- Nothing super concrete apart from realizing I need to get this in front of people.
 
 ## Standup logs
 
@@ -68,6 +68,22 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 **What will you do today?** Mostly work on the other project, work a wee bit more on what the article cluster view and such should look like.
 
 **What, if anything, is blocking your progress?** Still fear?
+
+### Thursday
+
+**What did you do yesterday?** Mostly worked on the other project, got an idea of how the cluster view should look.
+
+**What will you do today?** Mostly work on the other project.
+
+**What, if anything, is blocking your progress?** :shrug:
+
+### Friday
+
+**What did you do yesterday?** Mostly worked on the other project.
+
+**What will you do today?** Mostly work on the other project.
+
+**What, if anything, is blocking your progress?** I guess I am semi-blocked by coming up with a new name for Pop the Bubble as well as hearing back from folks who might be able to help me on the nonprofit front.
 
 Cheers,
 
