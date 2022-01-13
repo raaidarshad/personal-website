@@ -59,6 +59,14 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 
 **What, if anything, is blocking your progress?** Lack of knowledge on how to nonprofit.
 
+### Wednesday
+
+**What did you do yesterday?** Picked a new name, have updated ideas about the "launch" post, namely that the longer post should be more of an informative thing on my website and I should have explicit "email ask" and "funding ask" writeups. I also sketched out what a cluster looks like with only the information I have currently.
+
+**What will you do today?** Start building out the view with the data I have so far, and primarily the other project.
+
+**What, if anything, is blocking your progress?** N/A
+
 Cheers,
 
 +raaid
