@@ -2,7 +2,7 @@
 title: Raaid Reads - Humankind
 date: 2022/06/14
 description: A hopeful history
-tag: humankind, book
+tag: book
 author: Raaid
 ---
 
