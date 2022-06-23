@@ -128,8 +128,9 @@ profile = "black"
 I copied this from a gist somewhere, thus the smattering of include and exclude arguments. The line-length is to conform to the standard already set in the project I'm getting my hands into. Great, now all we have left is flake8! Configuration details for this tool are [here](https://flake8.pycqa.org/en/latest/user/configuration.html). The project already had a flake8 configuration in the `tox.ini` file in the root directory, so I updated it slightly. Here is what it looks like:
 
 ```yaml
-[flake8]
 # tox.ini
+
+[flake8]
 
 # see https://www.flake8rules.com/rules/E203.html and change "E203" for explanation of different rules to ignore
 # these are primarily ignored for compatibility with black
