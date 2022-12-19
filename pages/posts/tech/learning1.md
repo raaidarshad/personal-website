@@ -2,7 +2,7 @@
 title: Learning log 1
 date: 2021/9/30
 description: A lot of SQL things
-tag: software, log
+tag: software
 author: Raaid
 ---
 

@@ -2,7 +2,7 @@
 title: Nabu
 date: 2022/01/13
 description: Presenting Nabu
-tag: nabu, project, software
+tag: nabu, project
 author: Raaid
 ---
 

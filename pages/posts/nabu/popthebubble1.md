@@ -2,7 +2,7 @@
 title: Pop the Bubble News Roadmap
 date: 2021/9/21
 description: Initial roadmap for Pop the Bubble News
-tag: popthebubble, project, software
+tag: popthebubble, project
 author: Raaid
 ---
 

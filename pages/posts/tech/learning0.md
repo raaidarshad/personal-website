@@ -2,7 +2,7 @@
 title: Learning log 0
 date: 2021/9/21
 description: A lot of Dockerfile things
-tag: software, log
+tag: software
 author: Raaid
 ---
 

@@ -2,7 +2,7 @@
 title: Learning log 2
 date: 2022/6/23
 description: Pre-commit and code format
-tag: software, log
+tag: software
 author: Raaid
 ---
 
