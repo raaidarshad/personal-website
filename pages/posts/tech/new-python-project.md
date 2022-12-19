@@ -6,6 +6,8 @@ tag: software, opinion
 author: Raaid
 ---
 
+# How I start a New Python Project
+
 ## Motivation
 Recently, I've found myself following the same set of steps every time I start a new Python project. I want certain style checking things in place, I want a tests directory, I want a readme and a license, I want a github repository spun up, I want pre-commit set up; there's a lot of small stuff, regardless of the project. It doesn't take _that_ long, but it'd be nice to make the process quick, easy, update-able, and consistent.
 

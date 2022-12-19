@@ -6,21 +6,23 @@ tag: software
 author: Raaid
 ---
 
-# The Problem
+# Polymorphic Singletons in Python
+
+## The Problem
 
 I was working in a context where I needed some configuration and functionality for each partner I was working with in a system. Each partner needed the same functionality, but each partner's _implementation_ of said functionality is different. There should also only ever be exactly __one__ instance of this configuration and functionality for each partner, never more.
 
-# Finding a solution
+## Finding a solution
 
 A bag of "configuration and functionality" sounds like a great use case for a [class](https://docs.python.org/3/tutorial/classes.html) in Python. Since each partner's implementation needs to be different, this might be a good use case for an [abstract class](https://docs.python.org/3/library/abc.html) with [abstract methods](https://docs.python.org/3/library/abc.html#abc.abstractmethod). In combination, we want [polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)), where we define a common interface, but each implementation of the interface is unique.
 
 But what about the constraint of only __one__ per partner? How can we guarantee this? Enter the oft controversial [singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern), which restricts instantiation to just one time.
 
-# Creating it
+## Creating it
 
 Note: I did all this in at least Python3.10, so earlier versions might have some incompatibility.
 
-## A simple class
+### A simple class
 
 So how do we encode all this? Lets start with the simplest part: a class definition.
 
@@ -61,7 +63,7 @@ my_new_instance.my_method_three() # returns "hi and 5"
 
 We can override the methods to be what we want, we can create an instance, and use it. Awesome. Wouldn't it be better if we provide clearer developer experience and make sure that if something inherits from `MyClass`, it _needs_ to implement the methods? We'll do this with abstract classes.
 
-## Abstract base class
+### Abstract base class
 
 Let's update `MyClass` to be an abstract base class and turn it's methods into abstract methods (note that not every method needs to be an abstract method).
 
@@ -140,7 +142,7 @@ configuration_two=10)
 my_new_instance == my_other_instance  # returns False
 ```
 
-## Singleton
+### Singleton
 
 We have most of the desired functionality, and would probably be fine leaving it here. Having an additional guarantee that we truly only have one instance of our interface for each partner would be pretty slick though, so let's get there.
 
@@ -216,7 +218,7 @@ my_new_instance == my_other_instance  # returns True
 
 We can no longer create multiple instances of `MyNewClass`. Even if we try to, it actually refers to the same original instantiation. You can handle it how you want; you can log a warning and continue to refer to the one instance, you can raise an error, whatever makes sense for your program.
 
-# Conclusion
+## Conclusion
 
 We successfully created a polymorphic singleton pattern! More importantly, we addressed our requirements. The metaclass enforces the singleton pattern, and the abstract base class and abstract methods guarantee a consistent interface that can be defined for each new partner. I personally find this to be super clean and amazing, and am thrilled with learning more about metaclasses.
 
