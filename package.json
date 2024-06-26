@@ -9,8 +9,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@types/node": "^20.14.8",
+    "glob": "^10.4.2",
     "gray-matter": "^4.0.2",
-    "next": "latest",
+    "next": "13.0.7",
     "nextra": "^2.0.1",
     "nextra-theme-blog": "^2.0.1",
     "react": "^18.2.0",
@@ -23,5 +26,9 @@
     "tabWidth": 2,
     "trailingComma": "none",
     "semi": false
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.2"
   }
 }
