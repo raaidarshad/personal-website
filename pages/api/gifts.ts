@@ -1,4 +1,4 @@
-import type { NextApiResponse } from 'next'
+import type { NextApiResponse, NextApiRequest } from 'next'
  
 import { S3 } from "@aws-sdk/client-s3";
 type ResponseData = {
@@ -6,6 +6,7 @@ type ResponseData = {
 }
  
 export default async function handler(
+  req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
   const s3Client = new S3({
@@ -23,5 +24,5 @@ export default async function handler(
   }, async function(err, data) {
     if (!err) res.status(200).json({ message: await data?.Body?.transformToString().then((theString: string) => JSON.parse(theString)) ?? "merp" });
     else res.status(500).json({ message: "Something went wrong"});
-  })  
+  })
 }
