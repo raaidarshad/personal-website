@@ -23,8 +23,5 @@ export default async function handler(
   }, async function(err, data) {
     if (!err) res.status(200).json({ message: await data?.Body?.transformToString().then((theString: string) => JSON.parse(theString)) ?? "merp" });
     else res.status(500).json({ message: "Something went wrong"});
-  })
-
-
-  
+  })  
 }
