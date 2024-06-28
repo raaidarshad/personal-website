@@ -29,7 +29,7 @@ export default function Gifts() {
     <div>
         <ul>
       {bookmarks.map((bm) => {
-        return <li key={bm.url}><a href={bm.url}>{bm.title}</a></li>
+        return <li key={bm.url}>{new Date(bm.dateAdded).toDateString()} - <a href={bm.url}>{bm.title}</a></li>
       })}
         </ul>
     </div>
