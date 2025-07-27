@@ -9,42 +9,49 @@ author: Raaid
 This is still second priority to my other project at the moment, so will continue to post updates but I won't be working on this everyday/as much. Still focusing on refactors/deployment.
 
 ## OKRs
+
 Current period ends December 31, 2021.
 
 ### Mission
+
 Agree on reality: Get U.S. online news readers on the same page with regards to reality.
 
 ### Objective
+
 Provide bias-aware slow news to online readers who don't want to be in a news bubble.
 
 ### Current priorities
-- *P1* Figure out and execute consistent way to present clusters
-- *P1* Clean/improve/debug pipelines, DB structure, and deployment (just dpeloyment left now!)
+
+- _P1_ Figure out and execute consistent way to present clusters
+- _P1_ Clean/improve/debug pipelines, DB structure, and deployment (just dpeloyment left now!)
 
 ### Next-up priorities
-- *P1* Create and launch mail option
-- *P2* Revamp the "support" option on website
-- *P2* Add other ratings besides AllSides
-- *P2* Experiment with own bias rating methodology
-- *P2* Add more sources
-- *P3* Find first sponsor for email
-- *P1* Create and launch Instagram option with "weekly summary" posts
-- *P2* Make BubblePopper tool V0
+
+- _P1_ Create and launch mail option
+- _P2_ Revamp the "support" option on website
+- _P2_ Add other ratings besides AllSides
+- _P2_ Experiment with own bias rating methodology
+- _P2_ Add more sources
+- _P3_ Find first sponsor for email
+- _P1_ Create and launch Instagram option with "weekly summary" posts
+- _P2_ Make BubblePopper tool V0
 
 ### Key requirements
+
 1. Get 50 hits/day on website. Current by CloudFlare: ~20/day, Plausible: ~1/day. Confidence to achieve: 2/10
 2. Get 25 mail list subscribers. Current: 0 subscribers. Confidence to achieve: 4/10
 3. Get 25 Instagram followers. Current: 0 followers. Confidence to achieve: 4/10
 
 ### Health metrics
+
 - Me: Green
 - Costs: Yellow
 
 ### Week's successes
+
 - Finished clustering refactor
 
 ## Standup logs
-
 
 ### Monday
 
@@ -53,7 +60,6 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 **What will you do today?** Refactor downstream pipelines, namely the cluster computations. Need to segment out steps a little more sensibly, and make it easy to create pipelines that are essentially the same but where the clustering step is different (i.e. uses a different algorithm). So refactor, add more configuration, add more logging, and add tests.
 
 **What, if anything, is blocking your progress?** Time? Idk.
-
 
 ### Tuesday
 
@@ -70,7 +76,6 @@ Provide bias-aware slow news to online readers who don't want to be in a news bu
 **What will you do today?** Work on the other project.
 
 **What, if anything, is blocking your progress?** N/A
-
 
 Cheers,
 

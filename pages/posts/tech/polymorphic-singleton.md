@@ -10,13 +10,13 @@ author: Raaid
 
 ## The Problem
 
-I was working in a context where I needed some configuration and functionality for each partner I was working with in a system. Each partner needed the same functionality, but each partner's _implementation_ of said functionality is different. There should also only ever be exactly __one__ instance of this configuration and functionality for each partner, never more.
+I was working in a context where I needed some configuration and functionality for each partner I was working with in a system. Each partner needed the same functionality, but each partner's _implementation_ of said functionality is different. There should also only ever be exactly **one** instance of this configuration and functionality for each partner, never more.
 
 ## Finding a solution
 
-A bag of "configuration and functionality" sounds like a great use case for a [class](https://docs.python.org/3/tutorial/classes.html) in Python. Since each partner's implementation needs to be different, this might be a good use case for an [abstract class](https://docs.python.org/3/library/abc.html) with [abstract methods](https://docs.python.org/3/library/abc.html#abc.abstractmethod). In combination, we want [polymorphism](https://en.wikipedia.org/wiki/Polymorphism_(computer_science)), where we define a common interface, but each implementation of the interface is unique.
+A bag of "configuration and functionality" sounds like a great use case for a [class](https://docs.python.org/3/tutorial/classes.html) in Python. Since each partner's implementation needs to be different, this might be a good use case for an [abstract class](https://docs.python.org/3/library/abc.html) with [abstract methods](https://docs.python.org/3/library/abc.html#abc.abstractmethod). In combination, we want [polymorphism](<https://en.wikipedia.org/wiki/Polymorphism_(computer_science)>), where we define a common interface, but each implementation of the interface is unique.
 
-But what about the constraint of only __one__ per partner? How can we guarantee this? Enter the oft controversial [singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern), which restricts instantiation to just one time.
+But what about the constraint of only **one** per partner? How can we guarantee this? Enter the oft controversial [singleton pattern](https://en.wikipedia.org/wiki/Singleton_pattern), which restricts instantiation to just one time.
 
 ## Creating it
 
@@ -34,7 +34,7 @@ class MyClass:
 
     configuration_one: str
     configuration_two: int
-    
+
     def my_method_one(self) -> str:
         pass
 
@@ -108,7 +108,7 @@ my_new_instance.my_method_three() # returns "hi and 5"
 
 ```
 
-The difference is that `MyNewClass` __must__ define all abstract methods. If you try to instantiate `MyNewClass` without defining `my_method_two`, you will get a `TypeError`:
+The difference is that `MyNewClass` **must** define all abstract methods. If you try to instantiate `MyNewClass` without defining `my_method_two`, you will get a `TypeError`:
 
 ```python
 class MyNewClass(MyClass):
@@ -167,7 +167,7 @@ class SingletonABCMeta(ABCMeta):
 
 Okay, let's walk through this. First off, this is one step removed from our previous abstract base class named `MyClass`. `SingletonABCMeta` only defines the singleton aspect. It inherits from `ABCMeta` which is different from `ABC`. It is a [metaclass](https://realpython.com/python-metaclasses/). In short, you can think of a metaclass as a class factory, the thing that creates other classes. The standard one in Python is `type`. So in inheriting from `ABCMeta`, we are creating our own metaclass here.
 
-Since this is a metaclass, we define the `__call__` method. Defining a custom __call__() method in the metaclass allows custom behavior when the class is called, e.g. not always creating a new instance, which is exactly what we want to do. When a class that has this as its metaclass is instantiated, we check to see if there is already an instance. If there is not, we create one and add it to `_instances`. If there is, we log a warning and return the existing instance. In this way, we guarantee that a class with `SingletonABCMeta` as its metaclass will only ever have one instance!
+Since this is a metaclass, we define the `__call__` method. Defining a custom **call**() method in the metaclass allows custom behavior when the class is called, e.g. not always creating a new instance, which is exactly what we want to do. When a class that has this as its metaclass is instantiated, we check to see if there is already an instance. If there is not, we create one and add it to `_instances`. If there is, we log a warning and return the existing instance. In this way, we guarantee that a class with `SingletonABCMeta` as its metaclass will only ever have one instance!
 
 Now, we use it as the metaclass for `MyClass`:
 
@@ -181,7 +181,7 @@ class MyClass(metaclass=SingletonABCMeta):  # new metaclass assignment
     configuration_one: str
     configuration_two: int
 
-    @abstractmethod 
+    @abstractmethod
     def my_method_one(self) -> str:
         pass
 
@@ -223,7 +223,6 @@ We can no longer create multiple instances of `MyNewClass`. Even if we try to, i
 We successfully created a polymorphic singleton pattern! More importantly, we addressed our requirements. The metaclass enforces the singleton pattern, and the abstract base class and abstract methods guarantee a consistent interface that can be defined for each new partner. I personally find this to be super clean and amazing, and am thrilled with learning more about metaclasses.
 
 Thanks for reading, hope you found this clear and useful.
-
 
 Cheers,
 

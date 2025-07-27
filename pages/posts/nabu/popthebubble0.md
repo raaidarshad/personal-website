@@ -13,6 +13,7 @@ I feel uncomfortable with how different my reality seems to be than the reality 
 This first version is rather simple and just pulls the 10 latest articles from a variety of RSS feeds and organizes them into political lanes as categorized by existing research. [Check it out here](https://popthebubble.news/).
 
 I will keep adding news sources and responding to feature requests/bug fixes, and if time allows, I intend to add some big features. A tentative roadmap/feature backlog:
+
 - Cluster and present articles by topic
 - Present topics over time
 - Present source-by-source and lane-by-lane statistics

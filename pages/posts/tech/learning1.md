@@ -17,7 +17,9 @@ This week, my head-bashing was courtesy of SQL! Learned some good things though.
 # filled out the upgrade and downgrade functions in the revision file
 > alembic upgrade head
 ```
+
 And thats it! The first comment is truly just a one line change, and filling out the upgrade/downgrade was really easy. The `revision` command creates a stub for the file, and you just need to fill out the body of the two functions. Here is all I wrote:
+
 ```
 def upgrade():
     op.create_unique_constraint("unique_article_url", "article", ["url"])
@@ -26,11 +28,13 @@ def upgrade():
 def downgrade():
     op.drop_constraint("unique_article_url", "article")
 ```
+
 Nice and easy.
 
 - [Super useful StackOverflow link](https://stackoverflow.com/a/6584134) for deleting all duplicate rows in a table. Saved me a lot of time, and I simply changed the `DELETE` to a `SELECT` to get the problematic `id`s so I could delete connected data in other tables as well
 - More random Postgres queries I found useful to have lying around for debugging, courtesy of another [StackOverflow answer](https://stackoverflow.com/a/22902857) when I was investigating a locked/hanging process
 - SQLAlchemy supports `ON CONFLICT` handling in their insert statements! Between [this](https://docs.sqlalchemy.org/en/14/dialects/postgresql.html#insert-on-conflict-upsert) and [this](https://docs.sqlalchemy.org/en/14/tutorial/data_insert.html#insert-usually-generates-the-values-clause-automatically) all I had to change was:
+
 ```
 # from this
 db_client.add_all(db_articles)
@@ -38,8 +42,8 @@ db_client.add_all(db_articles)
 insert_statement = insert(Article).on_conflict_do_nothing(index_elements=["url"])
 db_client.exec(statement=insert_statement, params=db_articles)
 ```
-And voila, any conflicts on my unique `url` column are handled as desired.
 
+And voila, any conflicts on my unique `url` column are handled as desired.
 
 Cheers,
 
