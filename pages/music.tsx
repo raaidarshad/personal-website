@@ -1,10 +1,43 @@
 import dynamic from 'next/dynamic';
+import { ComponentType } from 'react';
 
-// Dynamically import the AudioPlayer to prevent SSR issues
-const AudioPlayer = dynamic(() => import('react-modern-audio-player'), {
-  ssr: false, // Disable server-side rendering for this component
-  loading: () => <p>Loading audio player...</p>, // Optional loading component
-});
+interface AudioPlayerProps {
+    playList: Array<{
+      name: string;
+      writer: string;
+      img?: string;
+      src: string;
+      id: number;
+    }>;
+    activeUI: {
+      all: boolean;
+      playButton: boolean;
+      prevNnext: boolean;
+      volume: boolean;
+      volumeSlider: boolean;
+      repeatType: boolean;
+      trackTime: boolean;
+      trackInfo: boolean;
+      artwork: boolean;
+      progress: "bar" | "waveform" | false;
+      playList: "sortable" | "unSortable" | false;
+    };
+    audioInitialState: {
+      repeatType: "ALL" | "SINGLE" | "NONE";
+      volume: number;
+      curPlayId: number;
+    };
+    placement?: {
+      player: string;
+      playList: string;
+    };
+  }
+
+// Simple dynamic import with no SSR - cast to any to avoid TS issues
+const AudioPlayer = dynamic(() => import('react-modern-audio-player') as any, {
+  ssr: false,
+  loading: () => <p>Loading audio player...</p>,
+}) as ComponentType<AudioPlayerProps>;
 
 export default function Music() {
   // Your playlist data
@@ -31,6 +64,7 @@ export default function Music() {
     playButton: true,
     prevNnext: true,
     volume: true,
+    volumeSlider: true,
     repeatType: true,
     trackTime: true,
     trackInfo: true,

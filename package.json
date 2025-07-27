@@ -13,7 +13,7 @@
     "@types/node": "^20.14.8",
     "glob": "^10.4.2",
     "gray-matter": "^4.0.2",
-    "next": "15.2.4",
+    "next": "^15.4.4",
     "nextra": "^2.0.1",
     "nextra-theme-blog": "^2.0.1",
     "react": "^18.2.0",
