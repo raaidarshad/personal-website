@@ -17,6 +17,7 @@ Note that I only considered tools I could use relatively easily as a Python deve
 **tl;dr: You almost certainly don't want to use Argo Workflows unless your use case is very simple and linear. Dagster is excellent, especially when paired with Pydantic. If you hate stronger typing, go with Prefect instead.**
 
 ## Tools Considered
+
 - [Airflow](https://airflow.apache.org/) - Apache workflow tool. Python.
 - [Argo Workflows](https://argoproj.github.io/argo-workflows/) - Kubernetes CRD for orchestration. YAML.
 - [Dagster](https://docs.dagster.io/getting-started) - Data orchestrator, idealistic new kid on the block. Python.
@@ -25,6 +26,7 @@ Note that I only considered tools I could use relatively easily as a Python deve
 - Serverless approach
 
 ## Evaluation Criteria
+
 - How is it deployed?
   - How do you deploy the whole system?
   - How do you deploy pipelines?
@@ -45,10 +47,13 @@ Note that I only considered tools I could use relatively easily as a Python deve
 # Evaluation of options
 
 ## Airflow
+
 ### Summary
+
 **Not considered**, though it is prevalent in the space, backed by Airbnb, and has lots of users. DAG deployment is tricky, the Helm chart doesn’t have official support, and there are a lot of hacks and workarounds to get Airflow to work the way we would want and we prefer to not work against how something is designed if there is a viable alternative. Also, [Prefect's hit piece](https://www.prefect.io/blog/why-not-airflow/) is quite persuasive and makes some very good points about why one shouldn't use Airflow.
 
 A summary of things that are not supported in a first-class way (lifted from Prefect's piece):
+
 - Runs which need to be run off-schedule or with no schedule at all
 - Runs that run concurrently with the same start time
 - DAGs with complicated branching logic
@@ -58,9 +63,13 @@ A summary of things that are not supported in a first-class way (lifted from Pre
 - Dynamic DAGs
 
 ## Argo Workflows
+
 ### Summary
+
 **It works**, but deployment, configuration, development, and testing are currently awful. Code should not be written in YAML, even if it is backed by Intuit, has corporate users, and is an incubating project of the CNCF.
+
 ### Evaluation
+
 - How is it deployed?
   - How do you deploy the whole system? You install the Custom Resource Definition (CRD) onto your Kubernetes cluster then run the server and UI, which can all be done via their [official Helm chart](https://github.com/argoproj/argo-helm/tree/master/charts/argo-workflows).
   - How do you deploy pipelines? You put `WorkflowTemplate`s into your desired namespace on your cluster. These are also CRDs, and you can either manually put them in, or go the suggested way of using some GitOps to keep them up to date.
@@ -79,9 +88,13 @@ A summary of things that are not supported in a first-class way (lifted from Pre
   - Is there a good community? I didn't find the community support incredibly helpful, but it is there on the [CNCF Slack](https://argoproj.github.io/community/join-slack/).
 
 ## Dagster
+
 ### Summary
+
 **Ideal solution barring newness**, upfront work, and lack of notable users/backing so far, though there is a [company](https://www.elementl.com/) behind it now.
+
 ### Evaluation
+
 - How is it deployed?
   - How do you deploy the whole system? [Lots of ways](https://docs.dagster.io/deployment). You can use the [official Helm chart](https://github.com/dagster-io/dagster/tree/master/helm/dagster) that is [very well documented](https://docs.dagster.io/deployment/guides/kubernetes/deploying-with-helm), [using Docker](https://docs.dagster.io/deployment/guides/docker), [as a service](https://docs.dagster.io/deployment/guides/service), and you can even execute on Celery or Dask. The Helm chart does make it very easy and I'd suggest going with that for production.
   - How do you deploy pipelines? Once you have written your pipelines in Python, you simply add them to a [repository](https://docs.dagster.io/concepts/repositories-workspaces/repositories) and make sure you include the repository in your deployment (there is a specific spot to do so in the Helm chart).
@@ -92,7 +105,7 @@ A summary of things that are not supported in a first-class way (lifted from Pre
   - Is there a UI? Yes, it is called [Dagit](https://docs.dagster.io/concepts/dagit/dagit), and it is REALLY nice.
   - Are logs easy to access and search? Yes! On a per-run basis, you get access to a beautiful log view that you can filter by type (info, warning, etc.), you can search for specific terms, you can filter to just a specific solid, and more. You can also add a log storage location to the Helm chart to make sure they're backed up in a second location. I just about always use the UI log view because it is just so dang nice.
 - How is it tested and developed?
-  - What does someone need to know/learn to develop with it? Python, and then the few key concepts of solids, pipelines, and repositories. You can get fancier and learn about I/O managers, assets, workspaces, sensors, and schedules too, but all you *need* to get up and go is a few additional things on top of your existing Python knowledge. You essentially just write functions for each step (solids), and then functions to connect the solids in a pipeline.
+  - What does someone need to know/learn to develop with it? Python, and then the few key concepts of solids, pipelines, and repositories. You can get fancier and learn about I/O managers, assets, workspaces, sensors, and schedules too, but all you _need_ to get up and go is a few additional things on top of your existing Python knowledge. You essentially just write functions for each step (solids), and then functions to connect the solids in a pipeline.
   - How are tests defined? Like normal Python tests! I just use pytest. It's almost like testing a normal Python function. The only difference is importing and using `execute_solid` or `execute_pipeline` and running your function through that.
   - How is the documentation? STELLAR. Like c'mon, [this is beautiful](https://docs.dagster.io/getting-started). I have no problem navigating it, it works very smoothly, and they keep it pretty up to date.
 - How is it supported?
@@ -100,13 +113,19 @@ A summary of things that are not supported in a first-class way (lifted from Pre
   - Is there a good community? Their [Slack](https://docs.dagster.io/community) channel is wonderfully helpful, and fairly quick to respond in my experience. Both team members and community members have helped me out.
 
 ## Luigi
+
 ### Summary
+
 **Not considered**. A former coworker used it a lot prior to joining my team and told me to avoid using it, and I greatly respect their opinion. The docs are subpar, the use-case is very Spotify-specific, and the maintainers don’t maintain it actively. I can’t find suitable deployment methods (no Helm chart!), and it seems to assume only scheduled workflows (not allowing for on-demand ones). Additionally, the syntax seems unnecessarily complex compared to Prefect/Dagster. Removed from consideration.
 
 ## Prefect
+
 ### Summary
+
 Seems **nearly ideal barring newness**, Dask on Kubernetes instead of directly to Kubernetes and an overall less straightforward deployment, and the fact that they have a product to sell that they want you to ultimately use instead of using it entirely open source.
+
 ### Evaluation
+
 - How is it deployed?
   - How do you deploy the whole system? There isn't an official Helm chart as far as I can find. You could [install Prefect Server on a single node using docker-compose](https://docs.prefect.io/orchestration/server/deploy-local.html), and configure storage for the Postgres piece. You can configure the Prefect Cloud hosted UI to point to your deployment of Prefect Server, so you don’t need to stand up your own UI. You'd also likely need a Kubernetes cluster with Dask running on top of it, and then point a project’s workflows at that particular cluster for execution (you can specify the address of a Dask cluster to execute on when using the Dask Executor). You would also need to store flows somewhere, so allocating storage on some kind of s3-like storage would be required, and some docker images published to a registry would be necessary as well. In short, not super straightforward.
   - How do you deploy pipelines? You “register” flows to “projects”. This is done as a part of the Python code, after defining the flow’s tasks. You can then execute flows from Python, the command line, or the UI, with particular execution agents. This bit is similar to Dagster, if that helps.
@@ -126,27 +145,34 @@ Seems **nearly ideal barring newness**, Dask on Kubernetes instead of directly t
   - Is there a good community? [Their Slack channel](https://docs.prefect.io/core/community.html) was quite helpful the few times I popped in!
 
 ## Serverless approach
+
 ### Summary
+
 Costs less and involves less infrastructure, but at the cost of lost visibility, retryability, and Cloud-provider lock-in.
+
 ### Evaluation
+
 This would be a completely different approach. It would:
+
 - Use a message queue for talking between services
 - Use cloud/serverless functions as a way to run step-specific code
 
 Why this serverless approach is better than the DAG approach:
+
 - Potentially lower cost
 - Less infrastructure to define and stand up
 - Extremely scalable
 
 Why the DAG approach is better than the serverless approach:
+
 - Easier to track logs and identify what has gone wrong (easier to debug)
 - Easier to have integration tests
 - Easier to retry failures
 - Easy to define a particular run (vs “stuff is running” ambiguously)
 - Avoids Cloud-provider lock-in (If serverless is not implemented on something like k8s OpenFaaS)
 
-
 ## Conclusions
+
 Airflow (and therefore Cloud Composer or anything built on it) and Luigi require working against the framework at times or simply don't meet the evaluation criteria. Writing workflows with the complexity should not be done in YAML (it gets so, SO, so messy), and a lack of clean deployment, local development, and testing rules out Argo Workflows.
 
 I think the serverless approach is interesting, but the DAG approach makes it easier to do a great many things, particularly on the dev experience side. I think the biggest advantage of the serverless approach is lower cost and less infrastructure, but doing so at the cost of losing visibility, retryability, debugging ability, and testability is not worth it. I don’t recommend going with the serverless approach given current technology.

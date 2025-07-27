@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
 
 interface Bookmark {
-    dateAdded: number;
-    dateLastUsed: number;
-    id: string;
-    index: number;
-    parentId: string;
-    title: string;
-    url: string;
+  dateAdded: number
+  dateLastUsed: number
+  id: string
+  index: number
+  parentId: string
+  title: string
+  url: string
 }
 
 export default function Gifts() {
   const [bookmarks, setBookmarks] = useState<Array<Bookmark>>([])
   const [isLoading, setLoading] = useState<boolean>(true)
- 
+
   useEffect(() => {
     fetch('/api/gifts')
       .then((res) => res.json())
@@ -22,16 +22,21 @@ export default function Gifts() {
         setLoading(false)
       })
   }, [])
- 
+
   if (isLoading) return <p>Loading...</p>
   if (bookmarks.length === 0) return <p>No data</p>
   return (
     <div>
-        <ul>
-      {bookmarks.map((bm) => {
-        return <li key={bm.url}>{new Date(bm.dateAdded).toDateString()} - <a href={bm.url}>{bm.title}</a></li>
-      })}
-        </ul>
+      <ul>
+        {bookmarks.map((bm) => {
+          return (
+            <li key={bm.url}>
+              {new Date(bm.dateAdded).toDateString()} -{' '}
+              <a href={bm.url}>{bm.title}</a>
+            </li>
+          )
+        })}
+      </ul>
     </div>
   )
 }

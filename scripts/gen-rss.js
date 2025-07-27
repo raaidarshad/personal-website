@@ -2,8 +2,7 @@ const { promises: fs } = require('fs')
 const path = require('path')
 const RSS = require('rss')
 const matter = require('gray-matter')
-const { glob } = require( 'glob' )
-
+const { glob } = require('glob')
 
 async function generate() {
   const feed = new RSS({
@@ -17,14 +16,14 @@ async function generate() {
 
   await Promise.all(
     fullPaths.map(async (fp) => {
-
       const content = await fs.readFile(fp)
       const frontmatter = matter(content)
       const parentDir = path.basename(path.dirname(fp))
 
       feed.item({
         title: frontmatter.data.title,
-        url: '/posts/' + parentDir + '/' + path.basename(fp).replace(/\.mdx?/, ''),
+        url:
+          '/posts/' + parentDir + '/' + path.basename(fp).replace(/\.mdx?/, ''),
         date: frontmatter.data.date,
         description: frontmatter.data.description,
         categories: frontmatter.data.tag.split(', '),

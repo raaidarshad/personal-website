@@ -7,41 +7,48 @@ author: Raaid
 ---
 
 ## OKRs
+
 Current period ends December 31, 2021.
 
 ### Mission
+
 Agree on reality: Get U.S. online news readers on the same page with regards to reality.
 
 ### Objective
+
 Provide bias-aware slow news to online readers who don't want to be in a news bubble.
 
 ### Current priorities
-- *P1* Figure out and execute consistent way to present clusters
-- *P1* Get a weekly email of clustered news to beta users (which implies getting beta users)
+
+- _P1_ Figure out and execute consistent way to present clusters
+- _P1_ Get a weekly email of clustered news to beta users (which implies getting beta users)
 
 ### Next-up priorities
-- *P2* Create and launch mail option
-- *P2* Revamp the "support" option on website
-- *P1* Experiment with own bias rating methods (subjectivity measures, spin measures, objective measures, attributed information, etc.)
-- *P1* Add more sources
-- *P3* Find first sponsor for email?
-- *P1* Create and launch Instagram option with "weekly summary" posts
-- *P3* Make BubblePopper tool V0
+
+- _P2_ Create and launch mail option
+- _P2_ Revamp the "support" option on website
+- _P1_ Experiment with own bias rating methods (subjectivity measures, spin measures, objective measures, attributed information, etc.)
+- _P1_ Add more sources
+- _P3_ Find first sponsor for email?
+- _P1_ Create and launch Instagram option with "weekly summary" posts
+- _P3_ Make BubblePopper tool V0
 
 ### Key requirements
+
 1. Get 50 hits/day on website. Current by CloudFlare: ~35/day, Plausible: ~2/day. Confidence to achieve: 2/10
 2. Get 25 mail list subscribers. Current: 0 subscribers. Confidence to achieve: 3/10
 3. Get 25 Instagram followers. Current: 0 followers. Confidence to achieve: 3/10
 
 ### Health metrics
+
 - Me: Green
 - Costs: Yellow
 
 ### Week's successes
+
 - TODO
 
 ## Standup logs
-
 
 ### Monday
 

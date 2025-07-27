@@ -9,9 +9,11 @@ author: Raaid
 # Raaid Reads - Lost Connections
 
 ### What is it?
+
 [Lost Connections](https://www.goodreads.com/book/show/34921573-lost-connections) by Johann Hari is oversold and smacks of "I'm writing about something I don't have expertise in". He makes bold claims about why you are depressed and why SSRIs don't work (he's wrong if scientific consensus is your barometer, and the [NHS page on it](https://www.nhs.uk/mental-health/talking-therapies-medicine-treatments/medicines-and-psychiatry/antidepressants/overview/) provides a wonderful overview of what we know). Don't get me wrong, he's clearly a talented writer and brings forth stories that many of us can relate to. Intuitively, a lot of the external causes of depression he highlights _feel_ right, and often are a part of the cause. But to portray it as "society is bad, drugs don't work, it's a mystery that I have solved" is pretty reckless.
 
 ### Why don't I like it?
+
 A few years ago, Bloomberg came out with a story called [The Big Hack](https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies). It got lots of traction. People in my (software) tech-y circles were reading it and amazed, and believed it. Me? Not so much. I (please don't read this as bragging of any kind, it's really just context that is necessary) have a degree in Electrical Engineering and worked at a robotics company for a year designing and prototyping circuit boards. I have used lots of different integrated circuits (ICs) in my designs, and have a general understanding of what is feasible. I was immediately skeptical of what the authors were outlining. But it was no use. My peers found it convincing, and _of course_ Apple and the U.S. government were going to say that it isn't true.
 
 I admire and respect journalists at large, I think they have a very difficult job. Hold truth to power, tell me when the politician is lying. Shed light on important things that we might otherwise not ever know. But this? I know about this. Your understanding of this fairly complicated space is lacking, and your confident explanation is reckless. I imagine this is how most any medical professional feels when reading Lost Connections.
@@ -35,4 +37,5 @@ The stories told are also quite powerful. I particularly enjoyed the story about
 And despite the overstated bashing of antidepressants, I do think it is a good thing to not treat them like magic. They can have side effects, sometimes quite severe. They might not work for you. To look at their benefits as well as their drawbacks can only help us.
 
 ### Why should you read it?
+
 You probably don't need to bother at all. If you're interested in the stories he highlights of people finding meaning, of coming together, then go for it. Just remember to keep a skeptical eye over all the evidence provided, since much of it (even from the Harvard guy) is questionable or ill-sourced. Instead, I suggest [The Mindful Way through Depression](https://www.goodreads.com/en/book/show/112588.The_Mindful_Way_through_Depression) which is written by 4 experts who are generally well regarded in their fields. Please don't take my word for it and look it up yourself if you'd like, but from what I have read mindfulness and meditation actually seem to have pretty good clinical results in helping some people with their depression (just like drugs). It sure helps me, at least.

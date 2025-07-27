@@ -9,44 +9,52 @@ author: Raaid
 Made good progress on the other project, plan to dedicate more time to this for this week.
 
 ## OKRs
+
 Current period ends December 31, 2021.
 
 ### Mission
+
 Agree on reality: Get U.S. online news readers on the same page with regards to reality.
 
 ### Objective
+
 Provide bias-aware slow news to online readers who don't want to be in a news bubble.
 
 ### Current priorities
-- *P1* Figure out and execute consistent way to present clusters
-- *P1* Experiment with clustering methods to figure out which one is best for our use case
-- *P1* Clean/improve/debug pipelines, DB structure, and deployment -> DONE!
+
+- _P1_ Figure out and execute consistent way to present clusters
+- _P1_ Experiment with clustering methods to figure out which one is best for our use case
+- _P1_ Clean/improve/debug pipelines, DB structure, and deployment -> DONE!
 
 ### Next-up priorities
+
 Note: Removed adding other bias sources, want to focus on determining various attributes of articles via NLP if possible. Edited the priorities of a number of these.
-- *P2* Create and launch mail option
-- *P2* Revamp the "support" option on website
-- *P1* Experiment with own bias rating methods (subjectivity measures, spin measures, objective measures, attributed information, etc.)
-- *P1* Add more sources
-- *P3* Find first sponsor for email?
-- *P1* Create and launch Instagram option with "weekly summary" posts
-- *P3* Make BubblePopper tool V0
+
+- _P2_ Create and launch mail option
+- _P2_ Revamp the "support" option on website
+- _P1_ Experiment with own bias rating methods (subjectivity measures, spin measures, objective measures, attributed information, etc.)
+- _P1_ Add more sources
+- _P3_ Find first sponsor for email?
+- _P1_ Create and launch Instagram option with "weekly summary" posts
+- _P3_ Make BubblePopper tool V0
 
 ### Key requirements
+
 1. Get 50 hits/day on website. Current by CloudFlare: ~35/day, Plausible: ~2/day. Confidence to achieve: 2/10
 2. Get 25 mail list subscribers. Current: 0 subscribers. Confidence to achieve: 4/10
 3. Get 25 Instagram followers. Current: 0 followers. Confidence to achieve: 4/10
 
 ### Health metrics
+
 - Me: Green
 - Costs: Yellow
 
 ### Week's successes
+
 - Infrastructure and Helm releases are now automatically updated from code via Pulumi and GitHub actions!!!
 - Updated backend is now up and running again in dev, ready for me to experiment on real data via different clustering methods and more
 
 ## Standup logs
-
 
 ### Monday
 
@@ -55,7 +63,6 @@ Note: Removed adding other bias sources, want to focus on determining various at
 **What will you do today?** Primarily finish out some work on the other project, but I aim to make some meaningful progress on the infrastructure/deployment front.
 
 **What, if anything, is blocking your progress?** Nothing that I can do, at the moment.
-
 
 ### Tuesday
 
@@ -73,7 +80,6 @@ Note: Removed adding other bias sources, want to focus on determining various at
 
 **What, if anything, is blocking your progress?** Someone working on the front-end in tandem? Or money to comfortably throw compute/memory at my kubernetes cluster.
 
-
 ### Thursday
 
 **What did you do yesterday?** TOOK A BREAK! But identified the sources of the pipeline errors (I think).
@@ -89,7 +95,6 @@ Note: Removed adding other bias sources, want to focus on determining various at
 **What will you do today?** So Dagster just released version 0.13.0 with some big API changes. I won't be refactoring today, but this has prompted me to make sure and use ClickUp for tracking all my backlog of tasks. So today I am writing up tasks and organizing their priority in ClickUp, investigating/exploring the least painful way to manually label data, and starting to write code to evaluate the performance of various clustering approaches and parameters.
 
 **What, if anything, is blocking your progress?** PERSONNEL.
-
 
 ### Sunday
 

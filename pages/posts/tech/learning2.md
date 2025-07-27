@@ -68,30 +68,29 @@ Next, create a `.pre-commit-config.yaml` file in the root directory of your proj
 # pre-commit, once installed, runs these specified tools to format/lint/check our code for a consistent standard.
 # see https://pre-commit.com/ for more
 repos:
-# isort re-formats import orders to a standard, see https://pycqa.github.io/isort/index.html for more
--   repo: https://github.com/pycqa/isort
+  # isort re-formats import orders to a standard, see https://pycqa.github.io/isort/index.html for more
+  - repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
-    - id: isort
-      name: isort (python)
-# black re-formats code to an opinionated standard, see https://black.readthedocs.io/en/stable/index.html for more
--   repo: https://github.com/psf/black
+      - id: isort
+        name: isort (python)
+  # black re-formats code to an opinionated standard, see https://black.readthedocs.io/en/stable/index.html for more
+  - repo: https://github.com/psf/black
     rev: 22.3.0
     hooks:
-    - id: black
-      language_version: python3.9
-# flake8 checks code to make sure it conforms to pep8 (we specify things to ignore in tox.ini)
-# see https://flake8.pycqa.org/en/latest/ for more
--   repo: https://gitlab.com/pycqa/flake8
+      - id: black
+        language_version: python3.9
+  # flake8 checks code to make sure it conforms to pep8 (we specify things to ignore in tox.ini)
+  # see https://flake8.pycqa.org/en/latest/ for more
+  - repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.9
     hooks:
-    - id: flake8
+      - id: flake8
 ```
 
 This specifies what tools you want to run and in what order you'd like to run them in (the first tool runs first, second runs second, etc.).
 
 Great, we have our pre-commit configuration in place! We still need to specify configuration for isort, black, and flake8. Lets start with isort. There are a number of configuration file options for isort, [detailed here](https://pycqa.github.io/isort/docs/configuration/config_files.html). Since I use Poetry and already have a `pyproject.toml` file in my root directory, I opt to use that option. This is what the isort section of my `pyproject.toml` file looks like:
-
 
 ```yaml
 # pyproject.toml
@@ -125,6 +124,7 @@ exclude = '''
 [tool.isort]
 profile = "black"
 ```
+
 I copied this from a gist somewhere, thus the smattering of include and exclude arguments. The line-length is to conform to the standard already set in the project I'm getting my hands into. Great, now all we have left is flake8! Configuration details for this tool are [here](https://flake8.pycqa.org/en/latest/user/configuration.html). The project already had a flake8 configuration in the `tox.ini` file in the root directory, so I updated it slightly. Here is what it looks like:
 
 ```yaml
@@ -195,7 +195,6 @@ path/to/a/file.py:1:1: F401 'foo' imported but unused
 path/to/b/file.py:5:1: F401 'bar' imported but unused
 ...
 ```
-
 
 If you have a large code base that hasn't had these tools run on it before, this might make a ton of changes and flag a lot of issues, so keep that in mind. For more fine grained pre-commit run commands, check out the tool's documentation linked above.
 

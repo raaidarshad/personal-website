@@ -9,9 +9,11 @@ author: Raaid
 # How I start a New Python Project
 
 ## Motivation
+
 Recently, I've found myself following the same set of steps every time I start a new Python project. I want certain style checking things in place, I want a tests directory, I want a readme and a license, I want a github repository spun up, I want pre-commit set up; there's a lot of small stuff, regardless of the project. It doesn't take _that_ long, but it'd be nice to make the process quick, easy, update-able, and consistent.
 
 ## Goals
+
 With the above context, I want the following for every project I spin up:
 
 - A `README.md` and `LICENSE` files
@@ -45,7 +47,6 @@ project_name
 ├─ .gitignore
 ├─ Dockerfile
 ```
-
 
 But I need more than just the project directory structure to look the way I want! I want things installed, I want git set up! So what's next?
 
