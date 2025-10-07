@@ -5,6 +5,7 @@ description: My favorite books, updated somewhat regularly
 tag: book
 author: Raaid
 ---
+
 # Favorite Books
 
 This will likely change a lot over time, but at any given moment, this is my list of favorite books (that I'd also generally recommend).
