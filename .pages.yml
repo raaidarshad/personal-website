@@ -23,3 +23,20 @@ content:
         label: Author
         type: string
         default: Raaid
+  - name: about
+    label: About
+    path: pages/index.mdx
+    type: file
+    fields:
+      - name: type
+        label: Type
+        type: string
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date
+        type: date
+      - name: body
+        label: Body
+        type: rich-text
