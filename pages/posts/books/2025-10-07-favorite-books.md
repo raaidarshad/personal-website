@@ -1,5 +1,5 @@
 ---
-date: 2025-10-07
+date: 2025/10/07
 title: Favorite Books
 description: My favorite books, updated somewhat regularly
 tag: book
