@@ -40,8 +40,8 @@ content:
       - name: body
         label: Body
         type: rich-text
-  - name: about
-    label: About
+  - name: blog
+    label: Blog
     path: pages/posts/index.mdx
     type: file
     fields:
