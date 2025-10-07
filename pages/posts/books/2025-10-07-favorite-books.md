@@ -1,6 +1,6 @@
 ---
-date: 2025/10/07
 title: Favorite Books
+date: 2025/10/07
 description: My favorite books, updated somewhat regularly
 tag: book
 author: Raaid
