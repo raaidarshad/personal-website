@@ -6,7 +6,7 @@ content:
     fields:
       - name: date
         label: Date
-        type: date
+        type: string
       - name: title
         label: Title
         type: string
