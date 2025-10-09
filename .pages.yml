@@ -3,7 +3,7 @@ content:
     label: Posts
     path: pages/posts
     type: collection
-    filename: '{primary}.md'
+    filename: '{primary}.mdx'
     fields:
       - name: title
         label: Title
