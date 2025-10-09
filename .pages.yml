@@ -10,7 +10,9 @@ content:
         type: string
       - name: date
         label: Date
-        type: string
+        type: date
+        options:
+          format: yyyy-MM-dd
       - name: description
         label: Description
         type: string
@@ -38,6 +40,8 @@ content:
       - name: date
         label: Date
         type: date
+        options:
+          format: yyyy-MM-dd
       - name: body
         label: Body
         type: rich-text
@@ -55,6 +59,8 @@ content:
       - name: date
         label: Date
         type: date
+        options:
+          format: yyyy-MM-dd
       - name: body
         label: Body
         type: rich-text
@@ -72,6 +78,8 @@ content:
       - name: date
         label: Date
         type: date
+        options:
+          format: yyyy-MM-dd
       - name: body
         label: Body
         type: rich-text
