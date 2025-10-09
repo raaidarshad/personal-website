@@ -2,7 +2,7 @@
 title: Favorite Books
 date: 2025/10/07
 description: My favorite books, updated somewhat regularly
-tag: book
+tag: book,favorites
 author: Raaid
 ---
 # Favorite Books Right Now
