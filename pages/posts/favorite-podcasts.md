@@ -2,6 +2,7 @@
 title: Favorite Podcasts
 date: 2025-10-09
 description: My favorite podcasts at the moment
+tag: favorites
 author: Raaid
 ---
 # Favorite Podcasts
