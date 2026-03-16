@@ -1,4 +1,29 @@
+media:
+  input: public/audio
+  output: /audio
+
 content:
+  - name: music
+    label: Music
+    path: content/music
+    type: collection
+    filename: '{primary}.mdx'
+    fields:
+      - name: name
+        label: Song Name
+        type: string
+      - name: version
+        label: Version
+        type: string
+      - name: audio_file
+        label: Audio File
+        type: image
+      - name: featured
+        label: Featured
+        type: boolean
+      - name: description
+        label: Description
+        type: rich-text
   - name: posts
     label: Posts
     path: pages/posts
