@@ -1,4 +1,5 @@
 import 'nextra-theme-blog/style.css'
+import 'react-modern-audio-player/dist/index.css'
 import Head from 'next/head'
 
 import '../styles/main.css'
