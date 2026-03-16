@@ -17,7 +17,9 @@ content:
         type: string
       - name: audio_file
         label: Audio File
-        type: image
+        type: file
+        options:
+          categories: [audio]
       - name: featured
         label: Featured
         type: boolean
