@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { DATA_BASE_URL } from '../../lib/constants'
 
 interface VersionEntry {
   version: string
@@ -97,7 +98,7 @@ export async function getStaticProps({ params }: { params: { song: string } }) {
       version: p.name,
       description: p.data.description || '',
       highlight,
-      audioFileUrl: p.data.audio_file_url || '',
+      audioFileUrl: p.data.audio_file ? `${DATA_BASE_URL}/audio/${p.data.audio_file}` : '',
     }
   })
 

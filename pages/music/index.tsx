@@ -3,6 +3,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import Link from 'next/link'
 import MusicPlayer, { Track } from '../../components/MusicPlayer'
+import { DATA_BASE_URL } from '../../lib/constants'
 
 interface Song {
   slug: string
@@ -45,11 +46,11 @@ export async function getStaticProps() {
           : picked.data.name,
         writer: 'Raaid',
         img: '/images/raaid-logo.jpeg',
-        src: picked.data.audio_file_url ?? null,
+        src: picked.data.audio_file ? `${DATA_BASE_URL}/audio/${picked.data.audio_file}` : '',
         id: i + 1,
       },
       version: picked.data.version || '',
-      audioFileUrl: picked.data.audio_file_url || '',
+      audioFileUrl: picked.data.audio_file ? `${DATA_BASE_URL}/audio/${picked.data.audio_file}` : '',
       description: picked.data.description || '',
     }
   })

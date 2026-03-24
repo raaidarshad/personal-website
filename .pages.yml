@@ -11,8 +11,8 @@ content:
       - name: version
         label: Version
         type: string
-      - name: audio_file_url
-        label: Audio File URL
+      - name: audio_file
+        label: Audio File
         type: string
       - name: featured
         label: Featured
