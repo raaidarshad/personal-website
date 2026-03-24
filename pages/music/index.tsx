@@ -9,7 +9,7 @@ interface Song {
   name: string
   track: Track
   version: string
-  audioFile: string
+  audioFileUrl: string
   description: string
 }
 
@@ -45,11 +45,11 @@ export async function getStaticProps() {
           : picked.data.name,
         writer: 'Raaid',
         img: '/images/raaid-logo.jpeg',
-        src: picked.data.audio_file ?? null,
+        src: picked.data.audio_file_url ?? null,
         id: i + 1,
       },
       version: picked.data.version || '',
-      audioFile: picked.data.audio_file || '',
+      audioFileUrl: picked.data.audio_file_url || '',
       description: picked.data.description || '',
     }
   })
@@ -71,9 +71,9 @@ export default function Music({ songs }: { songs: Song[] }) {
                 <span style={{ fontWeight: 600 }}>
                   {s.name}{s.version ? ` - ${s.version}` : ''}
                 </span>
-                {s.audioFile && (
+                {s.audioFileUrl && (
                   <a
-                    href={s.audioFile}
+                    href={s.audioFileUrl}
                     download
                     style={{ fontSize: '0.7rem', marginLeft: '10px', padding: '1px 6px',
                              borderRadius: '9999px', background: '#ddeeff', color: '#3366cc',

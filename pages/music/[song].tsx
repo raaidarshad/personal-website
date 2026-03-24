@@ -6,7 +6,7 @@ interface VersionEntry {
   version: string
   description: string
   highlight: 'featured' | 'latest' | null
-  audioFile: string
+  audioFileUrl: string
 }
 
 function VersionChangelog({ versions }: { versions: VersionEntry[] }) {
@@ -31,9 +31,9 @@ function VersionChangelog({ versions }: { versions: VersionEntry[] }) {
                 {entry.highlight}
               </span>
             )}
-            {entry.audioFile && (
+            {entry.audioFileUrl && (
               <a
-                href={entry.audioFile}
+                href={entry.audioFileUrl}
                 download
                 style={{ fontSize: '0.7rem', marginLeft: '10px', padding: '1px 6px', borderRadius: '9999px', background: '#ddeeff', color: '#3366cc', textDecoration: 'none' }}
               >
@@ -46,10 +46,10 @@ function VersionChangelog({ versions }: { versions: VersionEntry[] }) {
               {entry.description}
             </div>
           )}
-          {entry.audioFile && (
+          {entry.audioFileUrl && (
             <audio
               controls
-              src={entry.audioFile}
+              src={entry.audioFileUrl}
               style={{ width: '100%', marginTop: '8px' }}
             />
           )}
@@ -97,7 +97,7 @@ export async function getStaticProps({ params }: { params: { song: string } }) {
       version: p.name,
       description: p.data.description || '',
       highlight,
-      audioFile: p.data.audio_file || '',
+      audioFileUrl: p.data.audio_file_url || '',
     }
   })
 

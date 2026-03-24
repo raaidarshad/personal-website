@@ -1,7 +1,3 @@
-media:
-  input: public/audio
-  output: /audio
-
 content:
   - name: music
     label: Music
@@ -15,11 +11,9 @@ content:
       - name: version
         label: Version
         type: string
-      - name: audio_file
-        label: Audio File
-        type: file
-        options:
-          categories: [audio]
+      - name: audio_file_url
+        label: Audio File URL
+        type: string
       - name: featured
         label: Featured
         type: boolean
